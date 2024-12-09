@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Categorizer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 90%;
+        }
+        h1 {
+            color: #4a90e2;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input[type="file"] {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding: 5px;
+        }
+        button {
+            background: #4a90e2;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #357ab8;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Categorizer</h1>
+        <input type="file" id="pdfInput" accept="application/pdf">
+        <button onclick="UploadPdf()">Classify</button>
+        <p id="prediction_result"></p>
+    </div>
+
+    <script type="text/javascript">
+        async function UploadPdf() {
+            const input = document.getElementById('pdfInput');
+            if (!input.files[0]) {
+                alert("Please select a PDF file");
+                return;
+            }
+
+            const file = input.files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                
+                const response = await fetch('/predict-resume/', {
+                //const response = await fetch(`${API_BASE_URL}/predict-resume/`, {
+                //const response = await fetch('http://127.0.0.1:8000/predict-resume/', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                document.getElementById('prediction_result').textContent = `Category: ${result.prediction}`;
+            } catch (error) {
+                console.error('Error:', error);
+                alert("Failed to classify the resume. Please try again!");
+            }
+        }
+    </script>
+</body>
+</html>
