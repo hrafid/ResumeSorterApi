@@ -26,6 +26,8 @@ You can access the Web App deployed on GCP via the following link:
 
 For using the API as a stand alone app, an `index.html` file is hardcoded to load on startup. This allows you to interact with the API through a simple web interface, making it easier to upload PDF files and view the results as a web application.
 
+![fig](figures/webapp.png)
+
 ### Note:
 The first request to the API might take longer (up to 30 seconds) due to cold start. Please be patient.
 The current GCP account is a free version which might expire, in any worse case please use the dockerized [Image](link).
