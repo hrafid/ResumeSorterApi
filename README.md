@@ -4,7 +4,7 @@ This project provides a RESTful API that categorizes resumes in PDF format into 
 
 Link for accessing the WebApp version of the API: [Resume Sorting App](https://resumenlp-api-1-0-0-496910431430.us-central1.run.app/)
 
-You can test the WebApp with demo pdf files [Resume PDFs](link)
+You can test the WebApp with demo pdf files [Resume PDFs]([link](https://github.com/hrafid/ResumeSorterApi/tree/main/Resume%20pdf))
 
 ## Features
 
