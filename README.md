@@ -4,8 +4,6 @@ This project provides a RESTful API that categorizes resumes in PDF format into 
 
 Link for accessing the WebApp version of the API: [Resume Sorting App](https://resumenlp-api-1-0-0-496910431430.us-central1.run.app/)
 
-You can test the WebApp with demo pdf files [Resume PDFs]([link](https://github.com/hrafid/ResumeSorterApi/tree/main/Resume%20pdf))
-
 ## Features
 
 - Categorize resumes in PDF format into 16 predefined classes.
@@ -37,7 +35,7 @@ The model is trained on a dataset of resumes classified into 16 categories. Due 
 
 AGRICULTURE, SALES, ACCOUNTANT, AVIATION, BANKING, CONSULTANT, FINANCE, PUBLIC-RELATIONS, BUSINESS-DEVELOPMENT, CHEF, AUTOMOBILE, INFORMATION-TECHNOLOGY, DIGITAL-MEDIA, ENGINEERING, ARTS, HR.
 
-You can test the WebApp with demo pdf files at [Resume PDFs](link)
+You can test the WebApp with demo pdf files [Resume PDFs]([link](https://github.com/hrafid/ResumeSorterApi/tree/main/Resume%20pdf))
 
 
 ## API Endpoint 
@@ -85,6 +83,10 @@ docker run -p 8000:8000 yourusername/resume-sorting-api:latest
 
 ## Model Creation
 If you're interested in understanding how the model was built, including data preprocessing and training steps, refer to the separate repository for the ResumeSorter project: [ResumeSorter](https://github.com/hrafid/ResumeSorter).
+
+## Future goal
+Utilizing vast realworld resume datasets, new models can be developed catering to needs of various companies and organizations.
+
 
 
 #
