@@ -77,7 +77,7 @@ docker run -p 8000:8000 yourusername/resume-sorting-api:latest
 - `model.py`: Contains the logic for loading the pre-trained model.
 - `script.py`: Script used for PDF processing and categorization.
 - `requirements.txt`: List of dependencies needed to run the project.
-- `state_dict_model.pt`: The pre-trained model file [Drive](link).
+- `state_dict_model.pt`: The pre-trained model file [Drive]([link](https://drive.google.com/file/d/1-OZfY3-VOYt44nThkkuhO5z_QbXs1e4e/view)).
 - `Dockerfile`: The configuration for building the Docker image.
 - `index.html`: A simple web interface for interacting with the API.
 
