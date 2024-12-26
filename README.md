@@ -2,7 +2,7 @@
 
 This project provides a RESTful API that categorizes resumes in PDF format into predefined classes using a machine learning model. It is built using **FastAPI** and **Docker**, and is deployed on **Google Cloud Platform (GCP)**. The model used for classification is trained on a limited dataset of 16 classes, and the project provides endpoints for resume categorization.
 
-Link for accessing the WebApp version of the API: [Resume Sorting App](https://resumenlp-api-1-0-0-496910431430.us-central1.run.app/)
+Link for accessing the WebApp version of the API: [Resume Sorting App](https://resumenlp-api-1-0-0-496910431430.us-central1.run.app/) (Give up to a minute due to cold start)
 
 ## Features
 
